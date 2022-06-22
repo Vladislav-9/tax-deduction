@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Налоговый вычет</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="scripts/error.js" defer></script>
+</head>
+<body>
+	<h1 class="visually-hidden">Налоговый вычет</h1>
+	<div class="intro hide">
+		<button class="intro__button button modal__open">Налоговый вычет</button>
+	</div>
+	<div class="overlay">
+		<div class="modal">
+			<button class="modal__close" aria-label="close">
+				<svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path d="m11.423 9 6.054-6.055A1.712 1.712 0 1 0 15.055.523L9 6.577 2.945.523A1.713 1.713 0 1 0 .523 2.945l6.054 6.054-6.054 6.056a1.713 1.713 0 1 0 2.422 2.422l6.054-6.054 6.056 6.054A1.711 1.711 0 0 0 18 16.272a1.71 1.71 0 0 0-.523-1.217L11.423 9v.002Z" fill="currentColor"/></svg>
+			</button>
+			<h2 class="modal__title">Налоговый вычет</h2>
+			<p class="modal__description">Используйте налоговый вычет чтобы погасить ипотеку досрочно. Размер налогового вычета составляет  не&nbsp;более&nbsp;13% от своего официального годового дохода.</p>
+			<form class="modal__form" action="" method="post" novalidate>
+				<div class="modal__data">
+					<p class="modal__data-text text" id="salary">Ваша зарплата в месяц</p>
+					<input class="modal__data-input" name="salary" type="text" placeholder="Введите данные" aria-labelledby="salary" required pattern="\d+">
+					<span class="modal__data-err_msg" aria-live="polite"></span>
+					<a class="modal__data-button text" href="#">Рассчитать</a>
+				</div>
+				<div class="modal__total">
+					<p class="modal__total-text text">Итого можете внести в качестве досрочных:</p>
+					<ul class="modal__total-list">
+						<li class="modal__total-item item">
+							<input type="checkbox" id="1year" class="item__output" name="total" value="1year" checked>
+							<label for="1year" class="item__text">78 000 рублей <span class="item__text-year">в 1-ый год</span></label>
+						</li>
+						<li class="modal__total-item item">
+							<input type="checkbox" id="2year" class="item__output" name="total" value="2year">
+							<label for="2year" class="item__text">78 000 рублей <span class="item__text-year">во 2-ой год</span></label>
+						</li>
+						<li class="modal__total-item item">
+							<input type="checkbox" id="3year" class="item__output" name="total" value="3year">
+							<label for="3year" class="item__text">78 000 рублей <span class="item__text-year">в 3-ий год</span></label>
+						</li>
+						<li class="modal__total-item item">
+							<input type="checkbox" id="4year" class="item__output" name="total" value="4year">
+							<label for="4year" class="item__text">26 000 рублей <span class="item__text-year">в 4-ый год</span></label>
+						</li>
+					</ul>
+				</div>
+				<div class="modal__option">
+					<p class="modal__option-text text">Что уменьшаем?</p>
+					<div class="modal__option-input">
+						<input type="radio" class="hide" name="option" value="payment" id="pay" checked>
+						<label class="modal__option-item button" for="pay">Платёж</label>
+						<input type="radio" class="hide" name="option" value="period" id="period">
+						<label class="modal__option-item button" for="period">Срок</label>
+					</div>
+				</div>
+				<button type="submit" class="modal__button button" value="add">Добавить</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
