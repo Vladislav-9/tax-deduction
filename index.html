@@ -7,11 +7,12 @@
     <title>Налоговый вычет</title>
     <link rel="stylesheet" href="css/index.css">
     <script src="scripts/error.js" defer></script>
+    <script src="scripts/modal.js" defer></script>
 </head>
 <body>
 	<h1 class="visually-hidden">Налоговый вычет</h1>
-	<div class="intro hide">
-		<button class="intro__button button modal__open">Налоговый вычет</button>
+	<div class="intro">
+		<button class="intro__button button">Налоговый вычет</button>
 	</div>
 	<div class="overlay">
 		<div class="modal">
@@ -27,26 +28,9 @@
 					<span class="modal__data-err_msg" aria-live="polite"></span>
 					<a class="modal__data-button text" href="#">Рассчитать</a>
 				</div>
-				<div class="modal__total">
+				<div class="modal__total hide">
 					<p class="modal__total-text text">Итого можете внести в качестве досрочных:</p>
-					<ul class="modal__total-list">
-						<li class="modal__total-item item">
-							<input type="checkbox" id="1year" class="item__output" name="total" value="1year" checked>
-							<label for="1year" class="item__text">78 000 рублей <span class="item__text-year">в 1-ый год</span></label>
-						</li>
-						<li class="modal__total-item item">
-							<input type="checkbox" id="2year" class="item__output" name="total" value="2year">
-							<label for="2year" class="item__text">78 000 рублей <span class="item__text-year">во 2-ой год</span></label>
-						</li>
-						<li class="modal__total-item item">
-							<input type="checkbox" id="3year" class="item__output" name="total" value="3year">
-							<label for="3year" class="item__text">78 000 рублей <span class="item__text-year">в 3-ий год</span></label>
-						</li>
-						<li class="modal__total-item item">
-							<input type="checkbox" id="4year" class="item__output" name="total" value="4year">
-							<label for="4year" class="item__text">26 000 рублей <span class="item__text-year">в 4-ый год</span></label>
-						</li>
-					</ul>
+					<ul class="modal__total-list"></ul>
 				</div>
 				<div class="modal__option">
 					<p class="modal__option-text text">Что уменьшаем?</p>

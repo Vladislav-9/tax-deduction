@@ -152,12 +152,12 @@ label {
 	align-items: center;
 	justify-content: center;
 	overflow-y: auto;
-	display: flex;
+	display: none;
 }
 
-/* .overlay_active {
+.overlay_active {
 	display: flex;
-} */
+}
 
 .modal {
 	position: absolute;
