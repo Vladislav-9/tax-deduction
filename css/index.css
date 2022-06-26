@@ -25,6 +25,7 @@
 }
 
 html {
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
 }
@@ -33,6 +34,7 @@ html {
 	padding: 0;
 	margin: 0;
 	border: 0;
+	-webkit-box-sizing: inherit;
 	box-sizing: inherit;
 }
 
@@ -66,9 +68,16 @@ h2 {
 	width: 100vw;
 	height: 100vh;
 	padding: 0 10px;
+	background:  -o-linear-gradient(194.65deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #FF5E56;
 	background:  linear-gradient(255.35deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #FF5E56;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 }
 
@@ -96,12 +105,16 @@ a:visited {
 
 button, input {
 	font: inherit;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 	cursor: url('../img/pointer.png'), pointer;
 }
 
 label {
 	cursor: url('../img/pointer.png'), pointer;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
 
@@ -125,6 +138,7 @@ label {
 	padding: 16px 32px;
 	text-align: center;
 	color: #FFFFFF;
+	background: -o-radial-gradient(rgba(255, 79, 79, 0) 33%, rgba(220, 49, 49, 0.59) 100.93%), #FF5E56;
 	background: radial-gradient(rgba(255, 79, 79, 0) 33%, rgba(220, 49, 49, 0.59) 100.93%), #FF5E56;
 /* 	background: transparent;
 	filter: drop-shadow(0px 0px 44px #CFDAE7); */
@@ -138,6 +152,7 @@ label {
 .button:disabled {
 	background: #BEC5CC;
 	cursor: not-allowed;
+	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 
@@ -149,13 +164,19 @@ label {
 	left: 0;
 	z-index: 100;
 	background: rgba(0, 0, 0, 0.3);
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 	overflow-y: auto;
 	display: none;
 }
 
 .overlay_active {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -167,7 +188,12 @@ label {
 	max-width: 453px;
 	padding: 32px;
 	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 }
 
@@ -201,7 +227,12 @@ label {
 }
 
 .modal__data {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 }
 
@@ -218,6 +249,22 @@ label {
 	border-radius: 3px;
 	padding: 8px 10px;
 	cursor: text;
+}
+
+.modal__data-input::-webkit-input-placeholder {
+	color: #BEC5CC;
+}
+
+.modal__data-input::-moz-placeholder {
+	color: #BEC5CC;
+}
+
+.modal__data-input:-ms-input-placeholder {
+	color: #BEC5CC;
+}
+
+.modal__data-input::-ms-input-placeholder {
+	color: #BEC5CC;
 }
 
 .modal__data-input::placeholder {
@@ -255,6 +302,7 @@ label {
 .modal__data-button {
 	margin-top: 8px;
 	color: #EA0029;
+	-ms-flex-item-align: start;
 	align-self: flex-start;
 }
 
@@ -328,13 +376,21 @@ label {
 
 .modal__option {
 	margin-top: 24px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	max-width: 334px;
 }
 
 .modal__option-input {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -354,6 +410,7 @@ label {
 
 .hide:checked + .modal__option-item, .modal__option-item:active {
 	color: #FFFFFF;
+	background: -o-linear-gradient(194.65deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #FF5E56;
 	background: linear-gradient(255.35deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #FF5E56;
 }
 
@@ -364,7 +421,9 @@ label {
 .modal__button {
 	margin-top: 40px;
 	width: 100%;
+	background: -o-linear-gradient(194.65deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #FF5E56;
 	background: linear-gradient(255.35deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #FF5E56;
+	-webkit-box-shadow: 0px 0px 24px rgba(234, 0, 41, 0.33);
 	box-shadow: 0px 0px 24px rgba(234, 0, 41, 0.33);
 	border: 0;
 }
@@ -405,7 +464,12 @@ label {
 	}
 
 	.modal__option {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
+		-webkit-box-align: start;
+		-ms-flex-align: start;
 		align-items: flex-start;
 		gap: 24px;
 		max-width: 138px;

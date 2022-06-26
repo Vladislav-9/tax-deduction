@@ -16,6 +16,8 @@ overlayModal.addEventListener('click', event => {
 	if (target === overlayModal || target.closest('.modal__close')) {
 		overlayModal.classList.remove('overlay_active');
 		intro.classList.remove('hide');
+		totalList.textContent = '';
+		pay.value = '';
 	}
 });
 
